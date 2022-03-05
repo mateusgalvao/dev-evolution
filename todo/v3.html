@@ -1,0 +1,22 @@
+<script>
+    let tarefas = [];
+
+    while(true){
+        let tarefaString = '';
+        for (let i = 0 ; i <tarefas.length; i++){
+            tarefaString += i + '. ' + tarefas[i] + '\n'
+        }
+        let opcao = prompt(tarefaString + '\na. Adicionar tarefa \n\n r. Remover tarefa\n\n Opção' )
+
+        if (opcao == 'a'){
+            //adicionar tarefa 
+            let novaTarefa = prompt('Nova Tarefa ')
+            tarefas.push(novaTarefa);
+        }else if (opcao == 'r'){
+            //remover tarefa
+            let indiceRemocao = parseInt(prompt(tarefaString + "\nIndice remoção "))
+            tarefas.splice(indiceRemocao,1);
+        }
+    }
+
+</script>
